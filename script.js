@@ -3,9 +3,7 @@ chrome.extension.onMessage.addListener(function (request, sender, sendResponse) 
 
     if (request == "Action") {
         flg = !flg;
-        console.log(flg);
-        if (flg) {
-
+        if (flg) {ｌ
             var css = '* { user-select: auto !important; }';
             var head = document.head || document.getElementsByTagName('head')[0];
             var style = document.createElement('style');
@@ -23,9 +21,7 @@ chrome.extension.onMessage.addListener(function (request, sender, sendResponse) 
                 });
 
             });
-        }else{
-            //chrome.browserAction.setIcon({path:"copypaste_off.png"});
-            console.log("reload");
+        } else {
             location.reload();
         }
     }
