@@ -3,7 +3,7 @@ chrome.extension.onMessage.addListener(function (request, sender, sendResponse) 
 
     if (request == "Action") {
         flg = !flg;
-        if (flg) {ｌ
+        if (flg) {
             var css = '* { user-select: auto !important; }';
             var head = document.head || document.getElementsByTagName('head')[0];
             var style = document.createElement('style');

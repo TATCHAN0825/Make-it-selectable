@@ -13,7 +13,7 @@
     },
     "browser_action": {
     "default_title": "Make it selectabl",
-    "default_icon": "copypaste_off.png"
+    "default_icon": "icons/copypaste_off.png"
 },
 "permissions": [
     "tabs",
