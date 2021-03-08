@@ -19,12 +19,12 @@ chrome.browserAction.onClicked.addListener(function(tab) {
 			primaryPattern: '<all_urls>',
 			setting: 'block'
 		});
+
 	}else{
 		chrome.contentSettings.javascript.set({
 			primaryPattern: '<all_urls>',
 			setting: 'allow'
 		});
-
 	}
 
 
