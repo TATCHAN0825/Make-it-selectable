@@ -14,4 +14,18 @@ chrome.browserAction.onClicked.addListener(function(tab) {
 		}
 
 		chrome.browserAction.setIcon({path:localStorage['icon']});
+	if(localStorage['icon'] === "icons/copypaste_on.png") {
+		chrome.contentSettings.javascript.set({
+			primaryPattern: '<all_urls>',
+			setting: 'block'
+		});
+	}else{
+		chrome.contentSettings.javascript.set({
+			primaryPattern: '<all_urls>',
+			setting: 'allow'
+		});
+
+	}
+
+
 	});
