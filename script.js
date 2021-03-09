@@ -1,17 +1,17 @@
-let flg = false;
-chrome.extension.onMessage.addListener(function (request, sender, sendResponse) {
+//タブ単位のスクリプト
 
-    if (request == "Action") {
-        flg = !flg;
-        if (flg) {
-            location.reload();
+//リクエストを受け取った時(backgroundから)
+chrome.extension.onMessage.addListener(function (request) {
+    switch (request.type) {
+        case "css":
             var css = '* { user-select: auto !important; }';
             var head = document.head || document.getElementsByTagName('head')[0];
             var style = document.createElement('style');
             head.appendChild(style);
             style.appendChild(document.createTextNode(css));
-        } else {
-            location.reload();
-        }
+            break;
+        case "reload":
+            window.location.reload();
+            break;
     }
 });
